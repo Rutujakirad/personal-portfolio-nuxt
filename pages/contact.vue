@@ -22,7 +22,24 @@ const handleSubmit = async () => {
 };
 </script>
 
+
 <template>
+ <!-- Unique back navigation -->
+    <div class="fixed top-6 left-6 z-50">
+      <div class="flex items-center space-x-4">
+        <!-- Home -->
+        <div class="group relative" @click="$router.push('/')" title="Home">
+          <div class="w-12 h-12 rounded-full bg-gray-800/70 backdrop-blur-md flex items-center justify-center border border-gray-700/50 transition-all duration-300 group-hover:bg-purple-600/30 group-hover:border-purple-500/50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300 group-hover:text-white transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </div>
+          <div class="absolute inset-0 rounded-full scale-0 opacity-0 bg-purple-500/20 group-hover:scale-150 group-hover:opacity-100 transition-all duration-700"></div>
+          <span class="absolute left-14 top-3 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap bg-gray-800 px-2 py-1 rounded">Home</span>
+        </div>
+      </div>
+    </div>
+
   <main class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black py-20 px-4 md:px-8 lg:px-16 relative overflow-hidden">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
       <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-500/10 blur-3xl"></div>
